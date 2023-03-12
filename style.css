@@ -21,6 +21,10 @@ ul {
     flex-direction: column;
     align-items: center;
 }
+.main-title {
+    font-size: 3em;
+    font-weight: bold;
+}
 .accordion-container {
     display: flex;
     flex-direction: column;
@@ -37,14 +41,15 @@ ul {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 90vw;
-    background-color: gray;
+    background-color: silver;
+    border-radius: 4%;
 }
 .accordion__input {
     display: none;
 }
 .accordion__label {
     font-size: 2em;
-    color: blue;
+    color: darkblue;
     font-weight: bold;
     width: 90vw;
     height: 3em;
@@ -92,7 +97,6 @@ ul {
 }
 .accordion__input:checked ~*>.accordion-service {
     background-image: url(./assets/minus.svg);
-    display: inline-block;
 }
 .accordion__label:hover .accordion-service {
     background-image: url(./assets/minus.svg);

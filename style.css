@@ -22,7 +22,7 @@ ul {
     align-items: center;
 }
 .main-title {
-    font-size: 3em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 .accordion-container {
@@ -48,34 +48,21 @@ ul {
     display: none;
 }
 .accordion__label {
-    font-size: 2em;
+    font-size: 1em;
     color: darkblue;
     font-weight: bold;
     width: 90vw;
-    height: 3em;
-    padding: 1em;
+    height: 2em;
+    padding: 0.5em;
     transition: 0.5s;
     cursor: pointer;
     display: inline-flex;
     justify-content: space-between;
 }
-.accordion__list:hover .accordion__label {
-    color: black;
-}
-.accordion__list:hover .accordion-service {
-    display: inline-block;
-}
-.accordion__label:hover {
-    height: 50vw;
-    background-image: url(./assets/meme.jpg);
-    background-size: 50vw 50vw;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    background-position-y: 3em;
-}
+
+
 .accordion__input:checked ~ * {
-    height: 50vw;
+    height: 60vw;
     background-image: url(./assets/meme.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -85,20 +72,62 @@ ul {
 }
 .accordion-service {
     font-size: 2em;
-    width: 1em;
-    height: 1em;
-    display: none;
+    width: 0.5em;
+    height: 0.5em;
+    display: inline-block;
     background-image: url(./assets/plus.svg);
-    background-size: 1em 1em;
+    background-size: 0.5em 0.5em;
     background-position: center;
 }
-.minus {
-    display: none;
-}
+
 .accordion__input:checked ~*>.accordion-service {
     background-image: url(./assets/minus.svg);
 }
-.accordion__label:hover .accordion-service {
+
+@media(min-width:821px) {
+    .main-title {
+        font-size: 3em;
+    }
+    .accordion__item {
+        width: 90vw;
+    }
+    .accordion__label {
+        font-size: 2em;
+        color: darkblue;
+        font-weight: bold;
+        width: 90vw;
+        height: 3em;
+        padding: 1em;
+        transition: 0.5s;
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .accordion__input:checked ~ * {
+        height: 50vw;
+        background-size: 50vw 50vw;
+        background-position-y: 3em;
+    }
+    .accordion-service {
+        font-size: 2em;
+        width: 1em;
+        height: 1em;
+        display: none;
+        background-size: 1em 1em;
+    }
+    .accordion__label:hover .accordion-service {
     background-image: url(./assets/minus.svg);
     display: inline-block;
+    }
+    .accordion__label:hover {
+        height: 50vw;
+        background-size: 50vw 50vw;
+        background-position-y: 3em;
+    }
+    .accordion__list:hover .accordion__label {
+        color: black;
+    }
+    .accordion__list:hover .accordion-service {
+        display: inline-block;
+    }
 }

@@ -78,7 +78,6 @@ ul {
     background-size: 0.5em 0.5em;
     background-position: center;
 }
-
 .accordion__input:checked ~*>.accordion-service {
     background-image: url(./assets/minus.svg);
 }

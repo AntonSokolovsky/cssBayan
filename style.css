@@ -44,6 +44,8 @@ ul {
 }
 .accordion__label {
     font-size: 2em;
+    color: blue;
+    font-weight: bold;
     width: 90vw;
     height: 3em;
     padding: 1em;
@@ -51,6 +53,12 @@ ul {
     cursor: pointer;
     display: inline-flex;
     justify-content: space-between;
+}
+.accordion__list:hover .accordion__label {
+    color: black;
+}
+.accordion__list:hover .accordion-service {
+    display: inline-block;
 }
 .accordion__label:hover {
     height: 50vw;
@@ -72,19 +80,21 @@ ul {
 }
 .accordion-service {
     font-size: 2em;
+    width: 1em;
+    height: 1em;
+    display: none;
+    background-image: url(./assets/plus.svg);
+    background-size: 1em 1em;
+    background-position: center;
 }
 .minus {
     display: none;
 }
-.accordion__input:checked ~*>.minus {
+.accordion__input:checked ~*>.accordion-service {
+    background-image: url(./assets/minus.svg);
     display: inline-block;
 }
-.accordion__input:checked ~*>.plus {
-    display: none;
-}
-.accordion__label:hover .minus {
+.accordion__label:hover .accordion-service {
+    background-image: url(./assets/minus.svg);
     display: inline-block;
-}
-.accordion__label:hover .plus {
-    display: none;
 }

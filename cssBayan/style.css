@@ -133,6 +133,7 @@ ul {
         height: 1em;
         display: none;
         background-size: 1em 1em;
+        transition: 0.5s;
     }
     .accordion__label:hover .accordion-service {
         background-image: url(./assets/minus.svg);

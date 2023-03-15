@@ -58,8 +58,6 @@ ul {
     display: inline-flex;
     justify-content: space-between;
 }
-
-
 .accordion__input:checked ~ * {
     height: 60vw;
     background-image: url(./assets/meme.jpg);
@@ -143,12 +141,16 @@ ul {
         height: 50vw;
         background-image: url(./assets/meme.jpg);
         background-size: 50vw 50vw;
-        background-position-y: 3em;
         background-repeat: no-repeat;
         background-position: center;
         background-size: 50vw 50vw;
         transition: 0.5s;
         background-position-y: 3em;
+    }
+    .accordion__label:active {
+        background-color: rgb(189, 154, 154);
+        background-position-y: 2em;
+        border-radius: 4%;
     }
     .accordion__list:hover .accordion__label {
         color: black;

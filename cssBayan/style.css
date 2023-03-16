@@ -41,7 +41,7 @@ ul {
 }
 .accordion__label {
     font-size: 1em;
-    color: darkblue;
+    color: black;
     font-weight: bold;
     width: 90vw;
     height: 2em;
@@ -64,7 +64,7 @@ ul {
     font-size: 2em;
     width: 0.5em;
     height: 0.5em;
-    display: none;
+    display: inline-block;
     background-image: url(./assets/plus.svg);
     background-size: 0.5em 0.5em;
     background-position: center;
@@ -73,34 +73,45 @@ ul {
 .accordion__input:checked ~*>.accordion-service {
     background-image: url(./assets/minus.svg);
 }
-.accordion__label:hover .accordion-service {
-    background-image: url(./assets/minus.svg);
-    display: inline-block;
+@media (hover: hover) and (pointer: fine) {
+    .accordion-service {
+        display: none;
+    }
+    .accordion__label {
+        color: darkblue;
+    }
+    .accordion__label:hover .accordion-service {
+        background-image: url(./assets/minus.svg);
+        display: inline-block;
+    }
+    .accordion__label:hover {
+        height: 60vw;
+        background-image: url(./assets/meme.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50vw 50vw;
+        transition: 0.5s;
+        background-position-y: 3em;
+    }
+    .accordion__list:hover .accordion__label {
+        color: black;
+    }
+    .accordion__list:hover .accordion-service {
+        display: inline-block;
+    }
+    .accordion__label:hover .accordion-service {
+        background-image: url(./assets/minus.svg);
+        display: inline-block;
+    }
+
 }
-.accordion__label:hover {
-    height: 60vw;
-    background-image: url(./assets/meme.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50vw 50vw;
-    transition: 0.5s;
-    background-position-y: 3em;
-}
+
 .accordion__label:active {
     background-color: rgb(189, 154, 154);
     background-position-y: 2em;
     border-radius: 4%;
 }
-.accordion__list:hover .accordion__label {
-    color: black;
-}
-.accordion__list:hover .accordion-service {
-    display: inline-block;
-}
-.accordion__label:hover .accordion-service {
-    background-image: url(./assets/minus.svg);
-    display: inline-block;
-}
+
 
 @media(min-width:820px) {
     .main-title {
@@ -144,7 +155,6 @@ ul {
         font-size: 2em;
         width: 1em;
         height: 1em;
-        display: none;
         background-size: 1em 1em;
         transition: 0.5s;
     }

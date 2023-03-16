@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+.accordion {
+    width: 1vw;
+    height: 1vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.accordion__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.accordion__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90vw;
+    background-color: silver;
+    border-radius: 4%;
+}
+.accordion__input {
+    display: none;
+}
+.accordion__label {
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+    width: 90vw;
+    height: 2em;
+    padding: 0.5em;
+    transition: 0.5s;
+    display: inline-flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.accordion__input:checked ~ * {
+    height: 60vw;
+    background-image: url(./assets/meme.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50vw 50vw;
+    transition: 0.5s;
+    background-position-y: 3em;
+}
+.accordion-service {
+    font-size: 2em;
+    width: 0.5em;
+    height: 0.5em;
+    display: inline-block;
+    background-image: url(./assets/plus.svg);
+    background-size: 0.5em 0.5em;
+    background-position: center;
+    transition: 0.5s;
+}
+.accordion__input:checked ~*>.accordion-service {
+    background-image: url(./assets/minus.svg);
+}
+@media (hover: hover) and (pointer: fine) {
+    .accordion-service {
+        display: none;
+    }
+    .accordion__label {
+        color: darkblue;
+    }
+    .accordion__label:hover .accordion-service {
+        background-image: url(./assets/minus.svg);
+        display: inline-block;
+    }
+    .accordion__label:hover {
+        height: 60vw;
+        background-image: url(./assets/meme.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50vw 50vw;
+        transition: 0.5s;
+        background-position-y: 3em;
+    }
+    .accordion__list:hover .accordion__label {
+        color: black;
+    }
+    .accordion__list:hover .accordion-service {
+        display: inline-block;
+    }
+    .accordion__label:hover .accordion-service {
+        background-image: url(./assets/minus.svg);
+        display: inline-block;
+    }
+
+}
+
+.accordion__label:active {
+    background-color: rgb(189, 154, 154);
+    background-position-y: 2em;
+    border-radius: 4%;
+}
+
+
+@media(min-width:820px) {
+    .main-title {
+        font-size: 2.5em;
+    }
+    .accordion__item {
+        width: 90vw;
+    }
+    .accordion__label {
+        font-size: 1.5em;
+        width: 90vw;
+        height: 2.5em;
+        padding: 1em;
+    }
+    .accordion-service {
+        font-size: 2em;
+        width: 0.8em;
+        height: 0.8em;
+        background-size: 0.8em 0.8em;
+    }
+}
+@media(min-width:1359px) {
+    .main-title {
+        font-size: 3em;
+    }
+    .accordion__item {
+        width: 90vw;
+    }
+    .accordion__label {
+        font-size: 2em;
+        width: 90vw;
+        height: 3em;
+        padding: 1em;
+    }
+    .accordion__input:checked ~ * {
+        height: 50vw;
+        background-size: 50vw 50vw;
+        background-position-y: 3em;
+    }
+    .accordion-service {
+        font-size: 2em;
+        width: 1em;
+        height: 1em;
+        background-size: 1em 1em;
+        transition: 0.5s;
+    }
+    .accordion__label:hover {
+        height: 50vw;
+    }
+}
